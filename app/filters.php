@@ -112,3 +112,10 @@ add_filter( 'pre_handle_404', function( $false, $wp_query ) {
     }
     return $false;
 } , 10, 2 );
+
+
+/**
+ * Remove xmlrpc
+ */
+add_filter('xmlrpc_enabled', '__return_false');
+remove_action( 'wp_head', 'rsd_link' );
