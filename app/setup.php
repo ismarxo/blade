@@ -130,3 +130,12 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+/**
+ * Redirect 301 from attachments to pages
+ */
+add_action( 'template_redirect', function($post) {
+    if ( is_attachment() ) {
+        wp_redirect( get_permalink( $post->post_parent ), 301 );
+    }
+});
