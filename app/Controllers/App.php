@@ -31,8 +31,5 @@ class App extends Controller
         return get_the_title();
     }
 
-    public function greeting()
-    {
-        return carbon_get_the_post_meta( 'sage_greeting' );
-    }
+    
 }
