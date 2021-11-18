@@ -21,9 +21,24 @@ add_action( 'after_setup_theme', function () {
 });
 
 add_action( 'carbon_fields_register_fields', function () {
-    Container::make( 'post_meta', 'Page Layout' )
-        ->where( 'post_type', '=', 'page' )
-        ->add_fields( array(
-            Field::make( 'text', 'sage_greeting', 'Greeting' )
-        ));
+    /**
+     * Footer Fields
+     */
+    Container::make( 'theme_options', 'Настройки шаблона' )
+    ->add_tab( 'Header', array(
+        Field::make( 'image', 'header__logo-simple-png', 'Логотип - обычный PNG' )
+            ->set_width(50),   
+        Field::make( 'image', 'header__logo-simple-svg', 'Логотип - обычный SVG' )
+            ->set_width(50),          
+        Field::make( 'text', 'header__accent-button-link', 'Ссылка акцентированной кнопки' )
+            ->set_width(50),
+        Field::make( 'text', 'header__accent-button-text', 'Текст акцентированной кнопки' )
+            ->set_width(50)
+    ) )
+    ->add_tab( 'Footer', array(
+        Field::make( 'text', 'footer__copyright', 'Текст копирайта' )
+            ->set_default_value('© 2021 Все права защищены'),
+        Field::make( 'text', 'footer__privacy-policy', 'Политика конфиденциальности' )
+            ->set_default_value('Политика конфиденциальности')
+    ) );
 });
