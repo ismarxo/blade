@@ -98,3 +98,17 @@ if ( version_compare( $GLOBALS['wp_version'], '5.0-beta', '>' ) ) {
     // WP > 5 beta
     add_filter( 'use_block_editor_for_post_type', '__return_false', 10 );
 }
+
+/**
+ * Remove 404 error in fake-pagination pages
+ */
+add_filter( 'pre_handle_404', function( $false, $wp_query ) {
+    if ( is_singular() && get_query_var( 'page' ) ) {
+        $wp_query->set_404();
+        status_header( 404 );
+        nocache_headers();
+
+        return 'stop';
+    }
+    return $false;
+} , 10, 2 );
