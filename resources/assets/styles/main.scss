@@ -28,3 +28,12 @@
  * config file.
  */
 @tailwind utilities;
+
+/** Import fonts */
+@import "common/fonts";
+
+/** Import wp-generated classes */
+@import "components/wp-classes";
+
+/** Import wysiwig */
+@import "components/wysiwyg";
