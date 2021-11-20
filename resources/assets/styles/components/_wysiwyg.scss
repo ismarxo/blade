@@ -1,0 +1,60 @@
+/**
+ * WordPress Generated WYSIWYG Classes
+ * @see http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+ */
+
+.wysiwyg h1 {
+  @apply text-4xl font-extrabold;
+}
+
+.wysiwyg h2 {
+  @apply text-3xl font-extrabold;
+}
+
+.wysiwyg h3 {
+  @apply text-2xl font-extrabold;
+}
+
+.wysiwyg h4 {
+  @apply text-xl font-extrabold;
+}
+
+.wysiwyg h5 {
+  @apply text-lg font-extrabold;
+}
+
+.wysiwyg h6 {
+  @apply text-lg font-extrabold;
+}
+
+.wysiwyg p {
+  @apply text-base font-normal mb-4;
+}
+
+.wysiwyg h1 + p {
+  @apply mt-4;
+}
+
+.wysiwyg h2 + p {
+  @apply mt-3;
+}
+
+.wysiwyg h3 + p,
+.wysiwyg h4 + p,
+.wysiwyg h5 + p,
+.wysiwyg h6 + p {
+  @apply mt-2;
+}
+
+.wysiwyg ul {
+  @apply list-disc;
+}
+
+.wysiwyg ol {
+  @apply list-decimal;
+}
+
+.wysiwyg ul > li,
+.wysiwyg ol > li {
+  @apply ml-4;
+}
