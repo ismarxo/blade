@@ -9,9 +9,10 @@
       @include('partials.header')
     </div>
     <div id="main-wrapper">
+      @if (App::sidebar()) 
       <aside id="sidebar">
-
       </aside>
+      @endif
       <div id="content-wrapper" role="document">
         @yield('content')
       </div>
