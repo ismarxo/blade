@@ -35,4 +35,14 @@ class App extends Controller
     {
         return false;
     }    
+
+    public static function breadcrumbs()
+    {
+        $result = false;
+
+        if ( function_exists('yoast_breadcrumb') ) {
+            $result = yoast_breadcrumb( '<div id="breadcrumbs">','</div>' );
+        }
+        return $result;
+    } 
 }

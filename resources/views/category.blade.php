@@ -1,10 +1,14 @@
-{{-- Template Name: FrontPage Template --}}
+{{-- 
+    Template Name: Services page
+--}}
 
 @extends('layouts.app')
 
-@section('content') 
+@section('content')
+    @include('partials.breadcrumbs.simple')
+    @include('sections.hero.right-image')  
     {{-- 
-    @include('sections.hero.right-image')    
+     
     @include('sections.query.service.simple')
     @include('sections.cta.simple')
     @include('sections.feature.simple')
@@ -19,5 +23,3 @@
     @include('partials.header.logo-button') 
     --}}   
 @endsection
-
-

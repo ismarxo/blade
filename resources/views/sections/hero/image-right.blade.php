@@ -1,28 +1,29 @@
 <div class="container mx-auto">
   <!-- hero start -->
-  <div id="hero" class="relative z-0 py-14 md:py-16 bg-white dark:bg-gray-800 overflow-hidden">
-    <div class="container xl:max-w-7xl mx-auto px-4">
+  <div id="hero" class="relative z-0 py-10 md:py-12 bg-white dark:bg-gray-800 overflow-hidden">
+    <div class="container mx-auto px-2">
       <!-- row -->
-      <div class="flex flex-wrap flex-row -mx-4 justify-center">
+      <div class="flex flex-wrap flex-row justify-center">
         <!-- hero content -->
-        <div class="flex-shrink max-w-full px-4 w-full md:w-9/12 lg:w-1/2 self-center lg:pr-12">
+        <div class="flex-shrink max-w-full w-full md:w-9/12 lg:w-1/2 self-center lg:pr-12">
           <div class="text-center lg:text-left mt-6 lg:mt-0 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
             <div class="mb-4">
-              <span class="text-sm py-1 px-2 bg-blue-700 text-gray-100 rounded">100%</span>
-              <span class="ml-1">Satisfaction Guarantee</span>
+              <span class="text-sm py-1 px-2 bg-red-500 text-gray-100 rounded">100%</span>
+              <span class="ml-1">гарантия быстрого старта</span>
             </div>
-            <div class="mb-12">
-              <h1 class="text-4xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100">A <span class="text-blue-700">Digital Agency</span> that will help your business.
+            <div class="mb-8">
+              <h1 class="text-5xl leading-tight mb-5 font-black text-gray-800 dark:text-gray-100">
+                Готовые решения <span class="text-red-500">для малого бизнеса</span> в интернете.
               </h1>
-              <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">We help brands grow their online presence, dominate their niche, and make more sales.</p>
+              <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">Создаю сайты и сетевые-приложения. Развиваю уже существующие. Перевожу задачи бизнеса в интерфейсы и API. Осуществляю техническую SEO оптимизацию и доработку сайтов</p>
             </div>
-            <a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-blue-700 border border-blue-700 hover:text-white hover:bg-blue-800 hover:ring-0 hover:border-blue-800 focus:bg-blue-800 focus:border-blue-800 focus:outline-none focus:ring-0 mr-4" href="#about-us">
+            <a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-red-500 border border-red-500 hover:text-white hover:bg-red-700 hover:ring-0 hover:border-red-700 focus:bg-red-700 focus:border-red-700 focus:outline-none focus:ring-0 mr-4" href="#about-us">
               <svg xmlns="http://www.w3.org/2000/svg" class="inline-block mr-1" width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="336 176 225.2 304 176 255.8" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><path d="M463.1,112.37C373.68,96.33,336.71,84.45,256,48,175.29,84.45,138.32,96.33,48.9,112.37,32.7,369.13,240.58,457.79,256,464,271.42,457.79,479.3,369.13,463.1,112.37Z" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
-              About Us
+              Подробнее
             </a>
             <a class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-gray-900 border border-gray-900 hover:text-white hover:bg-black hover:ring-0 hover:border-black focus:bg-black focus:border-black focus:outline-none focus:ring-0" href="#service">
               <svg xmlns="http://www.w3.org/2000/svg" class="inline-block mr-1" width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 512 512"><rect x="64" y="176" width="384" height="256" rx="28.87" ry="28.87" style="fill:none;stroke:currentColor;stroke-linejoin:round;stroke-width:32px"/><line x1="144" y1="80" x2="368" y2="80" style="stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/><line x1="112" y1="128" x2="400" y2="128" style="stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/></svg>
-               Our Service
+               Услуги
             </a>
           </div>
         </div>

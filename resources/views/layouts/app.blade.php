@@ -6,7 +6,7 @@
   <div id="body-wrapper">
     <div id="header-wrapper">
       @php do_action('get_header') @endphp
-      @include('partials.header')
+      @include('partials.header.logo-button')
     </div>
     <div id="main-wrapper">
       @if (App::sidebar()) 
