@@ -6,6 +6,17 @@ use Sober\Controller\Controller;
 
 class Header extends Controller
 {
+    public static function isFrontPage() 
+    {
+        if(is_front_page()) {
+            $result = '#';
+        } else {
+            $result = '/';
+        }
+
+        return $result;
+    }
+
     public static function getHeaderLogoSrc()
     {      
         $field = carbon_get_theme_option( 'header__logo-simple-png' );

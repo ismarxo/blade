@@ -8,8 +8,8 @@
         <div class="flex-shrink max-w-full w-full md:w-9/12 lg:w-1/2 self-center lg:pr-12">
           <div class="text-center lg:text-left mt-6 lg:mt-0 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
             <div class="mb-4">
-              <span class="text-sm py-1 px-2 bg-red-500 text-gray-100 rounded">100%</span>
-              <span class="ml-1">гарантия быстрого старта</span>
+              <span class="text-sm py-1 px-2 bg-red-500 text-gray-100 rounded">{!! HeroSimple::getPreTitleAccentText() !!}</span>
+              <span class="ml-1">{!! HeroSimple::getPreTitleText() !!}</span>
             </div>
             <div class="mb-8">
               <h1 class="text-5xl leading-tight mb-5 font-black text-gray-800 dark:text-gray-100">

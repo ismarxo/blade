@@ -139,3 +139,10 @@ add_action( 'template_redirect', function($post) {
         wp_redirect( get_permalink( $post->post_parent ), 301 );
     }
 });
+
+/**
+ * Hide wysiwyg editor on front-page
+ */
+add_action('admin_init', function() {
+    remove_post_type_support('page', 'editor');
+});

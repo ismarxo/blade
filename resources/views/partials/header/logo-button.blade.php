@@ -3,7 +3,7 @@
       <div class="px-2">
         <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div class="flex justify-start lg:w-0 lg:flex-1">
-            <a href="{!! FrontPage::getLink() !!}">
+            <a href="{!! Header::isFrontPage() !!}">
               <span class="sr-only">{!! Header::getHeaderLogoAlt() !!}</span>  
               @if(Header::getHeaderLogoSrc())
                 <img class="h-8 w-auto sm:h-10" src="{!! Header::getHeaderLogoSrc() !!}" alt="{!! Header::getHeaderLogoAlt() !!}">
