@@ -9,7 +9,7 @@ class Sections extends Controller
     public static function test() 
     {
         return [
-            'hero'    =>  'simple',
+            'hero'    =>  'image-right',
             'feature' =>  '2x2'
         ];
     }

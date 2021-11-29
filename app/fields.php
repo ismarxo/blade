@@ -43,6 +43,7 @@ add_action('carbon_fields_register_fields', function () {
             Field::make('text', 'footer__privacy-policy', 'Политика конфиденциальности')
                 ->set_default_value('Политика конфиденциальности')
         ));
+
     /**
      * Repeater Fields
      */
