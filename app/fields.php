@@ -103,3 +103,5 @@ add_action('carbon_fields_register_fields', function () {
         ->or_where('post_template', '=', '/resources/views/front-page.blade.php')
         ->add_fields(array( $repeater ));
 });
+
+
