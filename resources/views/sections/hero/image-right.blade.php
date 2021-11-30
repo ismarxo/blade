@@ -13,7 +13,7 @@
             </div>
             <div class="mb-8">
               <h1 class="text-5xl leading-tight mb-5 font-black text-gray-800 dark:text-gray-100">
-                Готовые решения <span class="text-red-500">для малого бизнеса</span> в интернете.
+                Готовые решения <span class="text-red-500">для малого бизнеса</span> в интернете.///
               </h1>
               <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">Создаю сайты и сетевые-приложения. Развиваю уже существующие. Перевожу задачи бизнеса в интерфейсы и API. Осуществляю техническую SEO оптимизацию и доработку сайтов</p>
             </div>
