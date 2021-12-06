@@ -4,14 +4,10 @@
 
 @extends('layouts.app')
 
-@section('content')
-    @if(Sections::test())
-        @foreach (Sections::test() as $key => $item)
-            @include('sections.'.$key.'.'.$item)  
-        @endforeach
-    @else
-        @include('sections.hero.image-right') 
-    @endif
+@section('content')   
+    @foreach (PageSections ::getSections() as $key => $item)
+        @include('sections.'.$key.'.'.$item)  
+    @endforeach   
 @endsection
 
 
