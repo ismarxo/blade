@@ -8,22 +8,13 @@ class PageSections extends Controller
 {
     public static function getSections() 
     {   
-        $result = [];
-        $result['hero'] = carbon_get_theme_option('hero');
-        $result['feature'] = carbon_get_theme_option('feature');
-        $result['blog'] = carbon_get_theme_option('blog');
+        $result = [];        
+        $array = carbon_get_the_post_meta('sections_page');
 
-        // check variant of type 
-        // if(false) {
-            
-        // } else {
-        //     $result = [
-        //         'placeholder'    =>  'simple',
-        //     ];
-        // }
-
-
-        
+        foreach ( $array as $item ) {
+            $result[$item['_type']]['data'] = $item;
+            $result[$item['_type']]['view'] = carbon_get_theme_option($item['_type']);
+        }
 
         return $result;
     }
