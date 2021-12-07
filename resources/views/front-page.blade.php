@@ -5,8 +5,8 @@
 @extends('layouts.app')
 
 @section('content')   
-    @foreach (PageSections ::getSections() as $key => $item)
-        @include('sections.'.$key.'.'.$item)  
+    @foreach (PageSections::getSections() as $key => $section)
+        @include('sections.'.$key.'.'.$section['view'], $section['data'])  
     @endforeach   
 @endsection
 

@@ -6,69 +6,31 @@ use Sober\Controller\Controller;
 
 class SectionHero extends Controller {
     // HeroSimple
-
-    public static function getPreTitleAccentText()
+    public static function getButtonIcon($id) 
     {
-        return false;
+        $src = wp_get_attachment_image_url($id);
+        $alt = get_post_meta($id, '_wp_attachment_image_alt', TRUE) ? get_post_meta($id, '_wp_attachment_image_alt', TRUE) : 'icon';
+
+        if($src) {
+            $html = "<img src='{$src}' alt='{$alt}' class='inline-block mr-1 h-6 w-6'>";
+        } else {
+            $html = "";
+        }
+
+        return $html;
     }
 
-    public static function getPreTitleText()
+    public static function getPicture($id) 
     {
-        return false;
+        $src = wp_get_attachment_image_url($id, 'full');
+        $alt = get_post_meta($id, '_wp_attachment_image_alt', TRUE) ? get_post_meta($id, '_wp_attachment_image_alt', TRUE) : 'icon';
+
+        if($src) {
+            $html = "<img src='{$src}' alt='{$alt}' class='min-h-full'>";
+        } else {
+            $html = "";
+        }
+
+        return $html;
     }
-
-    public static function getTitleStatus()
-    {
-        return false;
-    }
-
-    public static function getTitle()
-    {
-        return false;
-    }
-
-    public static function getDescription()
-    {
-        return false;
-    }
-
-    public static function getAccentButtonIcon()
-    {
-        return false;
-    }
-
-    public static function getAccentButtonText()
-    {
-        return false;
-    }
-
-    public static function getSimpleButtonIcon()
-    {
-        return false;
-    }
-
-
-    public static function getSimpleButtonText()
-    {
-        return false;
-    }
-
-    public static function isPhoto()
-    {
-        return false;
-    }
-
-    public static function getPhoto()
-    {
-        return false;
-    }
-
-    public static function getPicture()
-    {
-        return false;
-    }
-
-    
-
-
 }
