@@ -9,28 +9,22 @@ class BlogSimple extends Section
     public static function getData()
     {
         $data = array(
-            Field::make('separator', 'sep-pre-title', 'Предзаголовок'),
-            Field::make('text', 'accent', 'Текст на красной подложке')
-                ->set_width(30),
-            Field::make('text', 'text', 'Обычный текст')
-                ->set_width(70),
-            Field::make('separator', 'sep-title', 'Заголовок'),
-            Field::make('select', 'title-state', 'Статус заголовка')
+            Field::make('separator', 'title__separator', __( 'Title') ),
+            Field::make('select', 'title__status', __( 'Title status') )
                 ->set_width(20)
                 ->set_options(Section::getTags())
                 ->set_default_value('div'),
-            Field::make('textarea', 'title', 'Обычный текст')
+            Field::make('textarea', 'title', __( 'Title' ) )
                 ->set_width(80),
-            Field::make('separator', 'sep-wysiwyg', 'Контентная область'),
-            Field::make('rich_text', 'wysiwyg', 'Обычный текст'),
-            Field::make('complex', 'buttons', 'Ссылки и кнопки')
-                ->add_fields(array(
-                    Field::make('text', 'title', 'Текст'),
-                    Field::make('image', 'image', 'Иконка'),
-                    Field::make('text', 'link', 'Ссылка'),
-                    Field::make('checkbox', 'color', 'Цветная кнопка?'),
-                )),
-            Field::make('image', 'image', 'Изображение'),
+            Field::make('separator', 'wysiwyg__separator', __( 'Content area') ),
+            Field::make('rich_text', 'wysiwyg', __( 'Content area') ),
+            Field::make( 'association', 'query', __( 'Selected posts' ) )
+                ->set_types( array(
+                    array(
+                        'type'      => 'post',
+                        'post_type' => 'post',
+                    )
+                ) )
         );
 
         return $data;
