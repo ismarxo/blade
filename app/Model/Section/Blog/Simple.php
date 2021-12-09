@@ -18,6 +18,9 @@ class BlogSimple extends Section
                 ->set_width(80),
             Field::make('separator', 'wysiwyg__separator', __( 'Content area') ),
             Field::make('rich_text', 'wysiwyg', __( 'Content area') ),
+
+            Field::make('separator', 'query__separator', __( 'Query settings') ),
+            Field::make('text', 'query__number-posts', __( 'Number posts' ) ),
             Field::make( 'association', 'query', __( 'Selected posts' ) )
                 ->set_types( array(
                     array(
