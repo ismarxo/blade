@@ -6,7 +6,19 @@
 
 @section('content')
     @include('partials.breadcrumbs.simple')
-
+    @include('partials.blog-head.simple')
+    <div class="container mx-auto">
+        <div class="my-4 -mx-6 lg:flex lg:flex-wrap">
+        @if (have_posts())
+            @while(have_posts()) @php the_post(); $id = get_the_id(); @endphp
+                @include('partials.post.simple')
+            @endwhile
+        @else
+            {{ __('Sorry, no results were found.', 'sage') }}
+        @endif
+        </div>
+    </div>
+   
     {{-- 
      
     @include('sections.query.service.simple')
