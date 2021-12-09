@@ -23,7 +23,7 @@
                     </{!! $slide['title__status'] !!}>
                     @if ($slide['wysiwyg']) 
                     <div class="text-gray-500 leading-relaxed font-light text-xl mx-auto divb-2">
-                      {!! apply_filters('the_content', $slide['wysiwyg']) !!}
+                      {!! App::getWYSIWYG($slide['wysiwyg']) !!}
                     </div>
                     @endif
                   </div>

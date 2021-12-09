@@ -45,4 +45,9 @@ class App extends Controller
         }
         return $result;
     } 
+
+    public static function getWYSIWYG($string)
+    {
+        return apply_filters( 'the_content', $string );
+    }
 }
