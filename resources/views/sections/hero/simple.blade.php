@@ -22,7 +22,7 @@
                       {!! $slide['title'] !!}
                     </{!! $slide['title__status'] !!}>
                     @if ($slide['wysiwyg']) 
-                    <div class="text-gray-500 leading-relaxed font-light text-xl mx-auto divb-2">
+                    <div class="wysiwyg">
                       {!! App::getWYSIWYG($slide['wysiwyg']) !!}
                     </div>
                     @endif
