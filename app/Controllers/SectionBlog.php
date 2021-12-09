@@ -13,8 +13,12 @@ class SectionBlog extends Controller {
 
         if($array) {
             $result = $array;
-        } else {
-            
+        } else {            
+            $args = array( 'numberposts' => '4' );
+            $recent = wp_get_recent_posts( $args );
+            foreach ($recent as $post) {
+                $result[] = $post['ID'];
+            }
         }
 
         return $result;
