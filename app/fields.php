@@ -135,10 +135,11 @@ add_action('carbon_fields_register_fields', function () {
         
     /**
      * Repeater fields
-     */
+     */   
     
-    require_once('Model/Page/Sections.php');
-    
+    require_once('Model/Page/Sections.php');   
+
+    require_once('Model/Post/Post.php');
 });
 
 // test
