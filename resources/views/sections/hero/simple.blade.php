@@ -3,7 +3,7 @@
       @foreach ($section['data']['slides'] as $slide)
       <div>
         <div class="relative z-0 py-10 md:py-12 bg-white dark:bg-gray-800 overflow-hidden">
-          <div class="container mx-auto px-2">
+          <div class="container mx-auto">
             {{-- row --}}
             <div class="flex flex-wrap flex-row justify-center">
               {{-- hero content --}}
