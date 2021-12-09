@@ -6,7 +6,7 @@
 
 @section('content')
     @include('partials.breadcrumbs.simple')
-    @include('sections.hero.right-image')  
+
     {{-- 
      
     @include('sections.query.service.simple')
