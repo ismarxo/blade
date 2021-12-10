@@ -3,6 +3,10 @@
  * @see http://codex.wordpress.org/CSS#WordPress_Generated_Classes
  */
 
+#tinymce {
+  padding: 5px;
+}
+
 .wysiwyg h1,
 #tinymce h1 {
   @apply text-4xl font-extrabold;
