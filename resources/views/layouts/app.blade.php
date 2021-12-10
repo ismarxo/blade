@@ -23,6 +23,7 @@
     </div>   
   </div>
   @php wp_footer() @endphp
+  {!! App::getCodeOfAnalytics() !!}
 </body>
 
 </html>

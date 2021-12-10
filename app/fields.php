@@ -66,6 +66,7 @@ add_action('carbon_fields_register_fields', function () {
                     
             Field::make('image', 'header__logo-simple-svg', 'Логотип - обычный SVG')
                 ->set_width(50),
+            Field::make( 'footer_scripts', 'code__analytics', __( 'Code of Analytics' ) )               
         ) );
 
     
