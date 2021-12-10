@@ -50,4 +50,9 @@ class App extends Controller
     {
         return apply_filters( 'the_content', $string );
     }
+
+    public static function getCodeOfAnalytics()
+    {   
+        return carbon_get_theme_option( 'code__analytics' );
+    }
 }
