@@ -4,47 +4,47 @@
  */
 
 .wysiwyg h1,
-#tinymce h1 {
+.mce-content-body h1 {
   @apply text-4xl font-extrabold;
 }
 
 .wysiwyg h2,
-#tinymce h2 {
+.mce-content-body h2 {
   @apply text-3xl font-extrabold;
 }
 
 .wysiwyg h3,
-#tinymce h3 {
+.mce-content-body h3 {
   @apply text-2xl font-extrabold;
 }
 
 .wysiwyg h4,
-#tinymce h4 {
+.mce-content-body h4 {
   @apply text-xl font-extrabold;
 }
 
 .wysiwyg h5,
-#tinymce h5 {
+.mce-content-body h5 {
   @apply text-lg font-extrabold;
 }
 
 .wysiwyg h6,
-#tinymce h6 {
+.mce-content-body h6 {
   @apply text-lg font-extrabold;
 }
 
 .wysiwyg p,
-#tinymce p {
+.mce-content-body p {
   @apply text-base font-normal mb-4;
 }
 
 .wysiwyg h1 + p,
-#tinymce h1 + p {
+.mce-content-body h1 + p {
   @apply mt-4;
 }
 
-.wysiwyg h2 + p, 
-#tinymce h2 + p {
+.wysiwyg h2 + p,
+.mce-content-body h2 + p {
   @apply mt-3;
 }
 
@@ -52,26 +52,26 @@
 .wysiwyg h4 + p,
 .wysiwyg h5 + p,
 .wysiwyg h6 + p,
-#tinymce h3 + p,
-#tinymce h4 + p,
-#tinymce h5 + p,
-#tinymce h6 + p {
+.mce-content-body h3 + p,
+.mce-content-body h4 + p,
+.mce-content-body h5 + p,
+.mce-content-body h6 + p {
   @apply mt-2;
 }
 
 .wysiwyg ul,
-#tinymce ul {
+.mce-content-body ul {
   @apply list-disc;
 }
 
 .wysiwyg ol,
-#tinymce ol {
+.mce-content-body ol {
   @apply list-decimal;
 }
 
 .wysiwyg ul > li,
 .wysiwyg ol > li,
-#tinymce ul > li,
-#tinymce ol > li {
+.mce-content-body ul > li,
+.mce-content-body ol > li {
   @apply ml-4;
 }
