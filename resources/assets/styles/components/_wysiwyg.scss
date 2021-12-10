@@ -3,58 +3,75 @@
  * @see http://codex.wordpress.org/CSS#WordPress_Generated_Classes
  */
 
-.wysiwyg h1 {
+.wysiwyg h1,
+#tinymce h1 {
   @apply text-4xl font-extrabold;
 }
 
-.wysiwyg h2 {
+.wysiwyg h2,
+#tinymce h2 {
   @apply text-3xl font-extrabold;
 }
 
-.wysiwyg h3 {
+.wysiwyg h3,
+#tinymce h3 {
   @apply text-2xl font-extrabold;
 }
 
-.wysiwyg h4 {
+.wysiwyg h4,
+#tinymce h4 {
   @apply text-xl font-extrabold;
 }
 
-.wysiwyg h5 {
+.wysiwyg h5,
+#tinymce h5 {
   @apply text-lg font-extrabold;
 }
 
-.wysiwyg h6 {
+.wysiwyg h6,
+#tinymce h6 {
   @apply text-lg font-extrabold;
 }
 
-.wysiwyg p {
+.wysiwyg p,
+#tinymce p {
   @apply text-base font-normal mb-4;
 }
 
-.wysiwyg h1 + p {
+.wysiwyg h1 + p,
+#tinymce h1 + p {
   @apply mt-4;
 }
 
-.wysiwyg h2 + p {
+.wysiwyg h2 + p, 
+#tinymce h2 + p {
   @apply mt-3;
 }
 
 .wysiwyg h3 + p,
 .wysiwyg h4 + p,
 .wysiwyg h5 + p,
-.wysiwyg h6 + p {
+.wysiwyg h6 + p,
+#tinymce h3 + p,
+#tinymce h4 + p,
+#tinymce h5 + p,
+#tinymce h6 + p {
   @apply mt-2;
 }
 
-.wysiwyg ul {
+.wysiwyg ul,
+#tinymce ul {
   @apply list-disc;
 }
 
-.wysiwyg ol {
+.wysiwyg ol,
+#tinymce ol {
   @apply list-decimal;
 }
 
 .wysiwyg ul > li,
-.wysiwyg ol > li {
+.wysiwyg ol > li,
+#tinymce ul > li,
+#tinymce ol > li {
   @apply ml-4;
 }

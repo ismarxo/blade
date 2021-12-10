@@ -11,9 +11,10 @@ class PageSections extends Controller
         $result = [];        
         $array = carbon_get_the_post_meta('sections_page');
 
-        foreach ( $array as $item ) {
-            $result[$item['_type']]['data'] = $item;
-            $result[$item['_type']]['view'] = carbon_get_theme_option($item['_type']);
+        foreach ( $array as $key => $item ) {
+            $result[$key]['type'] = $item['_type'];            
+            $result[$key]['view'] = carbon_get_theme_option($item['_type']);
+            $result[$key]['data'] = $item;
         }
 
         return $result;
