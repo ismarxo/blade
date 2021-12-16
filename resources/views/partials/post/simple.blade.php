@@ -1,6 +1,6 @@
-<a href="{!! Blog::getPostLink($id) !!}" class="py-6 px-6 md:w-1/4">
+<a href="{!! Blog::getPostLink($id) !!}" class="">
     <div class="rounded-md">
-        <img class="bg-gray-100 object-cover object-center w-full lg:h-48 md:h-36 rounded-md"
+        <img class="bg-gray-100 object-cover object-center w-full h-32 xl:h-48 lg:h-42 md:h-36 rounded-md"
             {!! Blog::getPostThumbnailAttributes($id) !!}>
         <div class="py-4">
             <div class="mb-2 text-sm text-gray-400">{!! Blog::getPostDate($id) !!}</div>
