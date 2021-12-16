@@ -18,7 +18,7 @@
  * Configuration
  */
 module.exports = {
-  purge: ['/resources/views/**/*.blade.php'],
+  content: ['./resources/views/**/*.blade.php'],
   theme: {
     extend: {},
   },
