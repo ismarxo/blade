@@ -1,5 +1,5 @@
 <section class="container mx-auto">
-    <{!! $section['data']['title__status'] !!} class="text-5xl leading-tight mb-5 font-black text-gray-800 dark:text-gray-100">
+    <{!! $section['data']['title__status'] !!} class="text-5xl leading-tight mb-5 font-black text-gray-800 dark:text-gray-100 mx-4">
         {!! $section['data']['title'] !!}
         </{!! $section['data']['title__status'] !!}>
         @if ($section['data']['wysiwyg'])
@@ -7,12 +7,12 @@
                 {!! App::getWYSIWYG($section['data']['wysiwyg']) !!}
             </div>
         @endif
-        <div class="my-4 -mx-6 lg:flex lg:flex-wrap">
+        <div class="my-4 mx-4 grid grid-cols-1 gap-y-10 sm:grid-cols-2 md:grid-cols-3 gap-x-6 lg:grid-cols-4 xl:grid-cols-4 xl:gap-x-8">
             @php $sectionQuery = SectionBlog::getQuery($section['data']['query'], $section['data']['query__number-posts']); @endphp
             @foreach ($sectionQuery as $id)
-                <a href="{!! Blog::getPostLink($id) !!}" class="py-6 px-6 md:w-1/4">
+                <a href="{!! Blog::getPostLink($id) !!}" class="">
                     <div class="rounded-md">
-                        <img class="bg-gray-100 object-cover object-center w-full lg:h-48 md:h-36 rounded-md"
+                        <img class="bg-gray-100 object-cover object-center w-full h-32 xl:h-48 lg:h-42 md:h-36 rounded-md"
                             {!! Blog::getPostThumbnailAttributes($id) !!}>
                         <div class="py-4">
                             <div class="mb-2 text-sm text-gray-400">{!! Blog::getPostDate($id) !!}</div>
