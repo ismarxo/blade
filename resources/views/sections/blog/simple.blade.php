@@ -1,4 +1,4 @@
-<section class="container mx-auto">
+<section class="container sm:mx-4 mx-auto">
     <{!! $section['data']['title__status'] !!} class="text-5xl leading-tight mb-5 font-black text-gray-800 dark:text-gray-100 mx-4">
         {!! $section['data']['title'] !!}
         </{!! $section['data']['title__status'] !!}>
