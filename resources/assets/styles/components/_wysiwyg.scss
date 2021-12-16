@@ -77,5 +77,25 @@
 }
 
 .mce-content-body {
-  @apply p-2;
+  @apply p-4;
+}
+
+html body.mce-content-body {
+  padding: 15px !important;
+}
+
+.wysiwyg-thin img,
+.mce-content-body img {
+  width: 100%;
+}
+
+.wysiwyg blockquote,
+.mce-content-body blockquote {
+  @apply pl-3 border-l-4 border-l-gray-600 italic font-medium my-7;
+}
+
+@media screen and ( max-width: 640px ) {
+  .wysiwyg-thin > * {
+    @apply mx-4;
+  }
 }
