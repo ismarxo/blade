@@ -6,6 +6,28 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
 
+function collectParts($string) {
+    $collection = []; 
+
+    $selectedDir = get_theme_file_path().'/resources/views/'.$string;   
+    
+    $currentPathDirs = scandir($selectedDir);
+
+    foreach($currentPathDirs as $item) 
+    {
+        if($item != '.' && $item != '..' && $item != 'Section.php') 
+        {
+            $value = strtolower($item);
+            $key = substr($value, 0, strlen($value)-10);
+            $collection[$key] = $selectedDir.'/'.$value;
+        }
+    }
+
+    
+
+    return $collection;
+}
+
 /**
  * Define custom fields
  * Docs: https://carbonfields.net/docs/
@@ -48,6 +70,8 @@ add_action('carbon_fields_register_fields', function () {
     // service tasks
 //integrations
 
+    //style - design/simple
+    //include simple - yes/no
 
     // SET OPTION PAGES
 
@@ -66,7 +90,8 @@ add_action('carbon_fields_register_fields', function () {
                     
             Field::make('image', 'header__logo-simple-svg', 'Логотип - обычный SVG')
                 ->set_width(50),
-            Field::make( 'footer_scripts', 'code__analytics', __( 'Code of Analytics' ) )               
+            Field::make( 'footer_scripts', 'code__analytics', __( 'Code of Analytics' ) )
+                           
         ) );
 
     
@@ -82,27 +107,39 @@ add_action('carbon_fields_register_fields', function () {
         ->set_page_parent(  $basic_options_container ) // identificator of the 'Basic Options' admin section
         ->add_fields( array(
             Field::make( 'radio_image', 'hero', __( 'Hero Section' ) )
-                ->set_options( array(
-                    'simple' => $sectionImagesUri.'/hero/simple.png',                    
-                ) )
-                ->set_default_value('simple'),
-            Field::make( 'radio_image', 'feature', __( 'Feature Section' ) )
-                ->set_options( array(
-                    'simple' => $sectionImagesUri.'/feature/simple.png',                    
-                ) )
+                ->set_options( collectParts('sections/hero') )
                 ->set_default_value('simple'),
             Field::make( 'radio_image', 'blog', __( 'Blog Section' ) ) 
-                ->set_options( array(
-                    'simple' => $sectionImagesUri.'/blog/simple.png',                    
-                ) )
-                ->set_default_value('simple'),          
+                ->set_options( collectParts('sections/blog') )
+                ->set_default_value('simple'),   
+            Field::make( 'radio_image', 'quote', __( 'Quote Section' ) ) 
+                ->set_options( collectParts('sections/quote') )
+                ->set_default_value('simple'),     
+            Field::make( 'radio_image', 'reviews', __( 'Reviews Section' ) ) 
+                ->set_options( collectParts('sections/reviews') )
+                ->set_default_value('simple'), 
+            Field::make( 'radio_image', 'techs', __( 'Techs Section' ) ) 
+                ->set_options( collectParts('sections/techs') )
+                ->set_default_value('simple'), 
+            Field::make( 'radio_image', 'preview', __( 'Preview Section' ) ) 
+                ->set_options( collectParts('sections/preview') )
+                ->set_default_value('simple'), 
+           
         ) );
 
+    
 
+    // var_dump();
     
     Container::make( 'theme_options', __( 'Header options' ) )
         ->set_page_parent(  $basic_options_container ) // identificator of the 'Basic Options' admin section
         ->add_fields( array(
+            Field::make( 'radio_image', 'header-static', __( 'Hero Static' ) )
+                ->set_options( collectParts('partials/header/static') )
+                ->set_default_value('simple'),
+            Field::make( 'radio_image', 'header-fixed', __( 'Hero Fixed' ) )
+                ->set_options( collectParts('partials/header/fixed') )
+                ->set_default_value('simple'),
             Field::make('text', 'header__accent-button-link', 'Ссылка акцентированной кнопки')
                 ->set_width(50),
             Field::make('text', 'header__accent-button-text', 'Текст акцентированной кнопки')
@@ -113,6 +150,9 @@ add_action('carbon_fields_register_fields', function () {
     Container::make( 'theme_options', __( 'Footer options' ) )
         ->set_page_parent(  $basic_options_container ) // identificator of the 'Basic Options' admin section
         ->add_fields( array(
+            Field::make( 'radio_image', 'footer', __( 'Footer' ) )
+                ->set_options( collectParts('partials/footer') )
+                ->set_default_value('simple'),
             Field::make('text', 'footer__copyright', 'Текст копирайта')
                 ->set_default_value('© 2021 Все права защищены'),
             Field::make('text', 'footer__privacy-policy', 'Политика конфиденциальности')

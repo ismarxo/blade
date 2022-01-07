@@ -41,5 +41,5 @@ foreach($collection as $key => $item)
 
  
 Container::make('post_meta', __( 'Settings Repeater Page') )
-    ->where('post_template', '=', 'views/front-page.blade.php')
+    ->where('post_template', '=', 'views/page-sections.blade.php')
     ->add_fields(array( $repeater ));

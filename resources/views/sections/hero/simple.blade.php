@@ -1,11 +1,15 @@
-<div class="container mx-auto"> 
+
+
+
+
+<div class="container mx-auto xxx"> 
     <div class="" id="hero-slider">
       @foreach ($section['data']['slides'] as $slide)
       <div>
-        <div class="relative z-0 py-10 md:py-12 bg-white dark:bg-gray-800 overflow-hidden">
+        <div class="relative z-0 py-10 md:py-12 bg-white dark:bg-gray-800 overflow-hidden xxx">
           <div class="container mx-auto">
             {{-- row --}}
-            <div class="flex flex-wrap flex-row justify-center mx-4">
+            <div class="flex flex-wrap flex-row justify-center mx-4 xxx">
               {{-- hero content --}}
               <div class="flex-shrink max-w-full w-full md:w-9/12 lg:w-1/2 self-center lg:pr-12">
                 <div class="text-center lg:text-left mt-6 lg:mt-0 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
@@ -18,7 +22,7 @@
                     @endif                
                   </div>
                   <div class="mb-8">
-                    <{!! $slide['title__status'] !!} class="text-5xl leading-tight mb-5 font-black text-gray-800 dark:text-gray-100">
+                    <h1 class="text-3xl md:text-5xl leading-tight mb-5 font-black text-gray-800 dark:text-gray-100">
                       {!! $slide['title'] !!}
                     </{!! $slide['title__status'] !!}>
                     @if ($slide['wysiwyg']) 
