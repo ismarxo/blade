@@ -146,3 +146,21 @@ add_action( 'template_redirect', function($post) {
 add_action('admin_init', function() {
     remove_post_type_support('page', 'editor');
 });
+
+
+/* -------------------------------------------------------------------------- */
+/*	Register menu
+/* -------------------------------------------------------------------------- */
+ 
+register_nav_menus(
+    array(
+        'primary_navigation'        => 'Главное меню',
+        'second_mavigation'        => 'Вторичное меню',
+        'footer_1'        => 'Подвал 1',
+        'footer_2'        => 'Подвал 2',
+        'footer_3'        => 'Подвал 3',
+        'footer_4'        => 'Подвал 4',
+       
+      
+    )
+);

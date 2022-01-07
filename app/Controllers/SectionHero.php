@@ -33,4 +33,9 @@ class SectionHero extends Controller {
 
         return $html;
     }
+
+    public static function getImageUrl($id) 
+    {
+        return wp_get_attachment_image_url($id, 'full');
+    }
 }

@@ -1,29 +1,16 @@
 <!doctype html>
 <html {!! get_language_attributes() !!}>
 @include('partials.head')
+<body class="antialiased text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-900">
+    @php do_action('get_header') @endphp
+    @include('partials.header')    
 
-<body @php body_class() @endphp>
-  <div id="body-wrapper">
-    <div id="header-wrapper">
-      @php do_action('get_header') @endphp
-      @include('partials.header.logo-button')
-    </div>
-    <div id="main-wrapper">
-      @if (App::sidebar()) 
-      <aside id="sidebar">
-      </aside>
-      @endif
-      <div id="content-wrapper" role="document">
+    <main>       
         @yield('content')
-      </div>
-    </div>
-    <div id="footer-wrapper">
-      @php do_action('get_footer') @endphp
-      @include('partials.footer')      
-    </div>   
-  </div>
-  @php wp_footer() @endphp
-  {!! App::getCodeOfAnalytics() !!}
+    </main>
+   
+    @include('partials.footer')    
+    {!! App::getAnalytics() !!}
 </body>
 
 </html>

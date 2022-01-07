@@ -40,7 +40,7 @@ collect([
     'index', '404', 'archive', 'author', 'category', 'tag', 'taxonomy', 'date', 'home',
     'frontpage', 'page', 'paged', 'search', 'single', 'singular', 'attachment', 'embed'
 ])->map(function ($type) {
-    add_filter("{$type}_template_hierarchy", __NAMESPACE__.'\\filter_templates');
+    add_filter("{$type}_template_hierarchy", __NAMESPACE__ . '\\filter_templates');
 });
 
 /**
@@ -61,7 +61,7 @@ add_filter('template_include', function ($template) {
     }, []);
     if ($template) {
         echo template($template, $data);
-        return get_stylesheet_directory().'/index.php';
+        return get_stylesheet_directory() . '/index.php';
     }
     return $template;
 }, PHP_INT_MAX);
@@ -84,7 +84,7 @@ add_filter('comments_template', function ($comments_template) {
 
     if ($theme_template) {
         echo template($theme_template, $data);
-        return get_stylesheet_directory().'/index.php';
+        return get_stylesheet_directory() . '/index.php';
     }
 
     return $comments_template;
@@ -94,28 +94,28 @@ add_filter('comments_template', function ($comments_template) {
 /**
  * Disable Gutenberg
  */
-if ( version_compare( $GLOBALS['wp_version'], '5.0-beta', '>' ) ) {
+if (version_compare($GLOBALS['wp_version'], '5.0-beta', '>')) {
     // WP > 5 beta
-    add_filter( 'use_block_editor_for_post_type', '__return_false', 10 );
+    add_filter('use_block_editor_for_post_type', '__return_false', 10);
 }
 
 /**
  * Remove 404 error in fake-pagination pages
  */
-add_filter( 'pre_handle_404', function( $false, $wp_query ) {
-    if ( is_singular() && get_query_var( 'page' ) ) {
+add_filter('pre_handle_404', function ($false, $wp_query) {
+    if (is_singular() && get_query_var('page')) {
         $wp_query->set_404();
-        status_header( 404 );
+        status_header(404);
         nocache_headers();
 
         return 'stop';
     }
     return $false;
-} , 10, 2 );
+}, 10, 2);
 
 
 /**
  * Remove xmlrpc
  */
 add_filter('xmlrpc_enabled', '__return_false');
-remove_action( 'wp_head', 'rsd_link' );
+remove_action('wp_head', 'rsd_link');

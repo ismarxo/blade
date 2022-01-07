@@ -1,3 +1,3 @@
 <section class="section">
-    SECTION BLOG
+    SECTION HERO
 </section>

@@ -31,28 +31,47 @@ class App extends Controller
         return get_the_title();
     }
 
-    public static function sidebar()
+    public static function isSidebar()
     {
         return false;
-    }    
+    }
 
     public static function breadcrumbs()
     {
         $result = false;
 
-        if ( function_exists('yoast_breadcrumb') ) {
-            $result = yoast_breadcrumb( '<div id="breadcrumbs">','</div>' );
+        if (function_exists('yoast_breadcrumb')) {
+            $result = yoast_breadcrumb('<div id="breadcrumbs">', '</div>');
         }
         return $result;
-    } 
+    }
 
     public static function getWYSIWYG($string)
     {
-        return apply_filters( 'the_content', $string );
+        return apply_filters('the_content', $string);
     }
 
-    public static function getCodeOfAnalytics()
-    {   
-        return carbon_get_theme_option( 'code__analytics' );
+    public static function getAnalytics()
+    {
+        return carbon_get_theme_option('code__analytics');
+    }
+
+    public static function getHeaderTemplate($string)
+    {
+        if ($string) {
+            if ($string == 'static') {
+                return carbon_get_theme_option('header-static');
+            }
+            if ($string == 'fixed') {
+                return carbon_get_theme_option('header-fixed');
+            }
+        } else {
+            return 'simple';
+        }
+    }
+
+    public static function getFooterTemplate()
+    { 
+        return carbon_get_theme_option('footer'); 
     }
 }
