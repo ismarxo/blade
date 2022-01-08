@@ -1,7 +1,7 @@
 <!doctype html>
 <html {!! get_language_attributes() !!}>
 @include('partials.head')
-<body class="antialiased text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-900">
+<body class="antialiased nw:text-gray-500 text-gray-400 nw:bg-white bg-gray-900">
     @php do_action('get_header') @endphp
     @include('partials.header')    
 

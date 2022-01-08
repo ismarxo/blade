@@ -1,28 +1,28 @@
 <footer class="pb-16 text-sm leading-6">
-    <div class="max-w-7xl mx-auto divide-y divide-gray-200 px-4 sm:px-6 md:px-8 dark:divide-gray-700">
+    <div class="max-w-7xl mx-auto divide-y nw:divide-gray-200 px-4 sm:px-6 md:px-8 divide-gray-700">
         <div class="flex">
             <div class="flex-none w-1/2 space-y-10 sm:space-y-8 lg:flex lg:space-y-0">
                 <div class="lg:flex-none lg:w-1/2">
-                    <div class="font-semibold text-gray-900 dark:text-gray-100">Услуги</div>
+                    <div class="font-semibold nw:text-gray-900 text-gray-100">Услуги</div>
                     @if (has_nav_menu('footer_1'))
                         {!! wp_nav_menu(
                             [
                                 'theme_location' => 'footer_1',                           
                                 'menu_class' => 'nav mt-3 space-y-2',                                 
-                                'link_before' => '<span class="hover:text-gray-900 dark:hover:text-gray-300 flex py-1">', 
+                                'link_before' => '<span class="nw:hover:text-gray-900 hover:text-gray-300 flex py-1">', 
                                 'link_after' => '</span>',
                             ]
                         ) !!}
                     @endif                    
                 </div>
                 <div class="lg:flex-none lg:w-1/2">
-                    <div class="font-semibold text-gray-900 dark:text-gray-100">Продукты</div>
+                    <div class="font-semibold nw:text-gray-900 text-gray-100">Продукты</div>
                     @if (has_nav_menu('footer_2'))
                         {!! wp_nav_menu(
                             [
                                 'theme_location' => 'footer_2',                           
                                 'menu_class' => 'nav mt-3 space-y-2',                                 
-                                'link_before' => '<span class="hover:text-gray-900 dark:hover:text-gray-300 flex py-1">', 
+                                'link_before' => '<span class="nw:hover:text-gray-900 hover:text-gray-300 flex py-1">', 
                                 'link_after' => '</span>',
                             ]
                         ) !!}
@@ -31,26 +31,26 @@
             </div>
             <div class="flex-none w-1/2 space-y-10 sm:space-y-8 lg:flex lg:space-y-0">
                 <div class="lg:flex-none lg:w-1/2">
-                    <div class="font-semibold text-gray-900 dark:text-gray-100">Компания</div>
+                    <div class="font-semibold nw:text-gray-900 text-gray-100">Компания</div>
                     @if (has_nav_menu('footer_3'))
                         {!! wp_nav_menu(
                             [
                                 'theme_location' => 'footer_3',                           
                                 'menu_class' => 'nav mt-3 space-y-2',                                 
-                                'link_before' => '<span class="hover:text-gray-900 dark:hover:text-gray-300 flex py-1">', 
+                                'link_before' => '<span class="nw:hover:text-gray-900 hover:text-gray-300 flex py-1">', 
                                 'link_after' => '</span>',
                             ]
                         ) !!}
                     @endif  
                 </div>
                 <div class="lg:flex-none lg:w-1/2">
-                    <div class="font-semibold text-gray-900 dark:text-gray-100">Контакты</div>
+                    <div class="font-semibold nw:text-gray-900 text-gray-100">Контакты</div>
                     @if (has_nav_menu('footer_4'))
                         {!! wp_nav_menu(
                             [
                                 'theme_location' => 'footer_4',                           
                                 'menu_class' => 'nav mt-3 space-y-2',                                 
-                                'link_before' => '<span class="hover:text-gray-900 dark:hover:text-gray-300 flex py-1">', 
+                                'link_before' => '<span class="nw:hover:text-gray-900 hover:text-gray-300 flex py-1">', 
                                 'link_after' => '</span>',
                             ]
                         ) !!}
@@ -61,9 +61,9 @@
         <div class="mt-16 pt-6 flex justify-between items-center md:flex-row flex-col">
             <a href="{!! Header::isFrontPage() !!}">
                 @if(Header::getHeaderLogoSrc())
-                    <img class="text-gray-900 dark:text-white w-30 h-12" src="{!! Header::getHeaderLogoSrc() !!}" alt="{!! Header::getHeaderLogoAlt() !!}">
+                    <img class="nw:text-gray-900 text-white w-30 h-12" src="{!! Header::getHeaderLogoSrc() !!}" alt="{!! Header::getHeaderLogoAlt() !!}">
                 @else
-                    <svg viewBox="0 0 248 31" class="text-gray-900 dark:text-white w-auto h-5">
+                    <svg viewBox="0 0 248 31" class="nw:text-gray-900 text-white w-auto h-5">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M25.517 0C18.712 0 14.46 3.382 12.758 10.146c2.552-3.382 5.529-4.65 8.931-3.805 1.941.482 3.329 1.882 4.864 3.432 2.502 2.524 5.398 5.445 11.722 5.445 6.804 0 11.057-3.382 12.758-10.145-2.551 3.382-5.528 4.65-8.93 3.804-1.942-.482-3.33-1.882-4.865-3.431C34.736 2.92 31.841 0 25.517 0zM12.758 15.218C5.954 15.218 1.701 18.6 0 25.364c2.552-3.382 5.529-4.65 8.93-3.805 1.942.482 3.33 1.882 4.865 3.432 2.502 2.524 5.397 5.445 11.722 5.445 6.804 0 11.057-3.381 12.758-10.145-2.552 3.382-5.529 4.65-8.931 3.805-1.941-.483-3.329-1.883-4.864-3.432-2.502-2.524-5.398-5.446-11.722-5.446z"
                             fill="#38bdf8"></path>
