@@ -1,11 +1,11 @@
 <header class="absolute z-10 top-4 left-0 w-full pt-3 px-4">
     <div
-        class="relative pt-6 lg:pt-8 flex items-center justify-between text-gray-700 font-semibold text-sm leading-6 dark:text-gray-200">
+        class="relative pt-6 lg:pt-8 flex items-center justify-between nw:text-gray-700 font-semibold text-sm leading-6 text-gray-200">
         <a href="{!! Header::isFrontPage() !!}">
             @if(Header::getHeaderLogoSrc())
-                <img class="text-gray-900 dark:text-white w-auto h-12" src="{!! Header::getHeaderLogoSrc() !!}" alt="{!! Header::getHeaderLogoAlt() !!}">
+                <img class="nw:text-gray-900 text-white w-auto h-12" src="{!! Header::getHeaderLogoSrc() !!}" alt="{!! Header::getHeaderLogoAlt() !!}">
             @else
-                <svg viewBox="0 0 248 31" class="text-gray-900 dark:text-white w-auto h-5">
+                <svg viewBox="0 0 248 31" class="nw:text-gray-900 text-white w-auto h-5">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M25.517 0C18.712 0 14.46 3.382 12.758 10.146c2.552-3.382 5.529-4.65 8.931-3.805 1.941.482 3.329 1.882 4.864 3.432 2.502 2.524 5.398 5.445 11.722 5.445 6.804 0 11.057-3.382 12.758-10.145-2.551 3.382-5.528 4.65-8.93 3.804-1.942-.482-3.33-1.882-4.865-3.431C34.736 2.92 31.841 0 25.517 0zM12.758 15.218C5.954 15.218 1.701 18.6 0 25.364c2.552-3.382 5.529-4.65 8.93-3.805 1.942.482 3.33 1.882 4.865 3.432 2.502 2.524 5.397 5.445 11.722 5.445 6.804 0 11.057-3.381 12.758-10.145-2.552 3.382-5.529 4.65-8.931 3.805-1.941-.483-3.329-1.883-4.864-3.432-2.502-2.524-5.398-5.446-11.722-5.446z"
                         fill="#38bdf8"></path>
@@ -45,11 +45,11 @@
                     {!! wp_nav_menu([
                         'theme_location' => 'primary_navigation', 
                         'menu_class' => 'nav flex items-center space-x-8', 
-                        'link_before' => '<span class="hover:text-sky-500 dark:hover:text-sky-400">', 
+                        'link_before' => '<span class="nw-hover:text-sky-500 hover:text-sky-400">', 
                         'link_after' => '</span>',
                         ]) !!}
                 @endif               
-                <div class="flex items-center border-l border-gray-200 ml-6 pl-6 dark:border-gray-800">
+                <div class="flex items-center border-l nw:border-gray-200 ml-6 pl-6 border-gray-800">
                     {{-- <label class="sr-only" id="headlessui-listbox-label-2">Theme</label> --}}
                     {{-- <button type="button"
                         id="headlessui-listbox-button-3" aria-haspopup="true" aria-expanded="false"
@@ -81,7 +81,7 @@
                         </span>
                     </button> --}}
                     <a target="_blank" href="https://github.com/ismarxo/"
-                        class="block text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+                        class="block text-gray-400 nw:hover:text-gray-500 hover:text-gray-300">
                         <span class="sr-only">ISMARXO on GitHub</span>
                         <svg viewBox="0 0 16 16"
                             class="w-5 h-5" fill="currentColor" aria-hidden="true">

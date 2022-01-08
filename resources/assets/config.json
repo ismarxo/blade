@@ -21,6 +21,12 @@
     "resources/views/**/**/**/**/*.php",
     "resources/views/*.php",
     "resources/views/*/*.php",
+    "resources/views/layouts/*.php",
+    "resources/views/pages/*.php",
+    "resources/views/partials/*.php",
+    "resources/views/partials/*/*.php",    
+    "resources/views/sections/*.php",
+    "resources/views/sections/*/*.php",
     "resources/views/*/*/*.php",
     "resources/views/*/*/*/*.php"
   ]
