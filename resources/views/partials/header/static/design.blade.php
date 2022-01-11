@@ -1,4 +1,4 @@
-<header class="absolute z-10 top-4 left-0 w-full pt-3 px-4">
+<header class="z-20 left-0 w-full pb-4 px-4 relative">
     <div
         class="relative pt-6 lg:pt-8 flex items-center justify-between nw:text-gray-700 font-semibold text-sm leading-6 text-gray-200">
         <a href="{!! Header::isFrontPage() !!}">
