@@ -74,4 +74,16 @@ class App extends Controller
     { 
         return carbon_get_theme_option('footer'); 
     }
+
+    public static function getImageUrl($id, $size) 
+    {
+        if(!$size) $size = 'full'; 
+        return wp_get_attachment_image_url($id, $size);
+    }
+
+    public static function getImageAlt($id) 
+    {   
+        $alt = get_post_meta($id, '_wp_attachment_image_alt', TRUE) ? get_post_meta($id, '_wp_attachment_image_alt', TRUE) : 'icon';
+        return $alt;
+    }
 }

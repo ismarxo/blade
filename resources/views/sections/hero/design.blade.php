@@ -1,5 +1,6 @@
 <section 
-    class="space-y-20 overflow-hidden sm:mb-32 sm:space-y-32 md:mb-20 md:space-y-40"
+    class="space-y-20 overflow-hidden sm:mb-32 sm:space-y-32 md:mb-20 md:space-y-40 relative "
+    style="top: -6rem"
 >
     @foreach ($section['data']['slides'] as $slide)
     <div class="relative">

@@ -9,17 +9,18 @@ use Carbon_Fields\Field;
 function collectParts($string) {
     $collection = []; 
 
-    $selectedDir = get_theme_file_path().'/resources/views/'.$string;   
+    $selectedDir = get_theme_file_path().'/resources/views/'.$string;    
+    $selectedUrl = get_template_directory_uri().'/views/'.$string;  
     
     $currentPathDirs = scandir($selectedDir);
 
     foreach($currentPathDirs as $item) 
     {
-        if($item != '.' && $item != '..' && $item != 'Section.php') 
+        if($item != '.' && $item != '..' && $item != 'Section.php' && strpos($item, '.png') == false) 
         {
             $value = strtolower($item);
             $key = substr($value, 0, strlen($value)-10);
-            $collection[$key] = $selectedDir.'/'.$value;
+            $collection[$key] = $selectedUrl.'/'.$key.'.png';
         }
     }
 
