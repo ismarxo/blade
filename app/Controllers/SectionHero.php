@@ -38,4 +38,10 @@ class SectionHero extends Controller {
     {
         return wp_get_attachment_image_url($id, 'full');
     }
+
+    public static function getImageAlt($id) 
+    {   
+        $alt = get_post_meta($id, '_wp_attachment_image_alt', TRUE) ? get_post_meta($id, '_wp_attachment_image_alt', TRUE) : 'icon';
+        return $alt;
+    }
 }
